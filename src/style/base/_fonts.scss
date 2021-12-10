@@ -1,0 +1,26 @@
+$font-global: 'Courier New', Courier, monospace;
+
+$fontSizeSmall: 1rem;
+$fontSizeMedium: 2rem;
+
+
+//font size
+.sm-font {
+    // font-size: 1vw;
+    font-size: 1em;
+}
+
+.md-font {
+    // font-size: 2vw;
+    font-size: 2em;
+}
+
+.lg-font {
+    // font-size: 3vw;
+    font-size: 3em;
+}
+
+.xl-font {
+    // font-size: 4vw;
+    font-size: 4em;
+}

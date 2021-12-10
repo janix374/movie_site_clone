@@ -1,0 +1,38 @@
+
+.row__poster {
+    height: 250px;
+    width: 167px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 450ms;
+    position: relative;
+
+    .row__image {
+        height: 100%;
+    }
+
+    .row__poster__title {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        bottom: 0;
+        transition: opacity 0.3s ease-out 0.4s;
+        opacity: 0;
+
+        p {
+            margin-top: 20px;
+        }
+    } 
+
+    &:hover {
+        transform: scale(1.08);
+        
+        .row__poster__title {
+            transition: opacity 0.3 ease-out 0.3s;  
+            opacity: 1;  
+        }
+
+    }
+}

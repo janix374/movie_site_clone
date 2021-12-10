@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.app {
+    background-color: #1f1f1f;
+    margin: 0;
+    padding: 0;
+}
+
+// Link
+/* unvisited link */
+a:link {
+    color: $fontMainColor;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: $fontMainColor;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: $fontMainColor;
+  }
+  
+  /* selected link */
+  a:active {
+    color: $fontMainColor;
+  }

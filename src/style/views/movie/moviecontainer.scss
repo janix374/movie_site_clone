@@ -1,0 +1,104 @@
+.movie__container {
+    width: 80%;
+    color: $fontMainColor;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    // section movie title
+    .movie__title {
+        margin-top: 0.9rem;
+        margin-bottom: 0.9rem;
+
+        h1 { 
+            font-size: $fontSizeMedium;
+            padding: 4px;
+            font-weight: 400;
+        }
+
+        p {
+            padding: 4px;
+            font-size: $fontSizeSmall;
+        }
+    }
+
+    // section movie poster and trailer
+    .movie__trailer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        min-height: 400px;
+
+       .movie__trailer__img__box {
+            border: 1px solid red;
+
+           .movie__trailer__img {
+                height: 300px;
+           }
+       }
+
+       .movie__trailer__box {
+            border: 1px solid red;
+       }
+    }
+
+    // section movie details
+    .movie__details {
+        .movie__details__button {
+            padding: 1rem 0;
+            display: inline-flex;
+            flex-wrap: nowrap;
+
+            a {
+                border: 2px solid $fontMainColor;
+                border-radius: 1rem;
+                font-size: $fontSizeSmall;
+                padding: 0.3rem 0.8rem;
+                box-sizing: border-box;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                background-color: inherit;
+                z-index: 1;
+                margin-right: 0.5rem;
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.02rem;
+            }
+
+            a::before {
+                content: '';
+                height: 100%;
+                left: 0;
+                top: 0;
+                position: absolute;
+                opacity: 0;
+                width: 100%;
+                z-index: 0;
+                background: currentColor;
+            }
+
+            a:hover {
+                &::before {
+                    opacity: 0.2;
+                }
+            }
+        }
+
+        .movie__details__text {
+            margin-top: 0.5rem;
+            text-align: justify;
+
+            p {
+                margin-top: 0.9rem;
+                font-size: $fontSizeSmall;
+                font-weight: normal;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}

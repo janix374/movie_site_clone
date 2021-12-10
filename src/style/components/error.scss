@@ -1,0 +1,151 @@
+.error__container {
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .error__tilt__flex__container {
+
+        .error__tilt__box__wrap {
+            width: 100%;
+            position: relative;
+            transition: all 0.6s ease-out;
+            perspective: 1000px;
+
+            &:hover {
+                transition: all 0.3s linear;
+                transform: scale(1.02);
+            }
+
+            .error__t__over {
+                width: 33.333%;
+                height: 33.333%;
+                position: absolute;
+                z-index: 1;
+            }
+
+            .error__t__over:nth-child(1) {
+                left: 0;
+                top: 0;
+            }
+
+            .error__t__over:nth-child(2) {
+                left: 33.333%;
+                top: 0;
+            }
+
+            .error__t__over:nth-child(3) {
+                left: 66.666%;
+                top: 0;
+            }
+
+            .error__t__over:nth-child(4) {
+                left: 0;
+                top: 33.333%;
+            }
+
+            .error__t__over:nth-child(5) {
+                left: 33.333%;
+                top: 33.333%;
+            }
+
+            .error__t__over:nth-child(6) {
+                left: 66.666%;
+                top: 33.333%;
+            }
+
+            .error__t__over:nth-child(7) {
+                left: 0;
+                top: 66.666%;
+            }
+
+            .error__t__over:nth-child(8) {
+                left: 33.333%;
+                top: 66.666%;
+            }
+
+            .error__t__over:nth-child(9) {
+                left: 66.666%;
+                top: 66.666%;
+            }
+
+            .error__t__over:nth-child(1):hover ~ .error__tilt__box {
+                transform: rotateX(-10deg) rotateY(10deg);
+                box-shadow: -5px -5px 5px #bebebe;
+            }
+
+            .error__t__over:nth-child(2):hover ~ .error__tilt__box {
+                transform: rotateX(-10deg) rotateY(0deg);
+                box-shadow: 0px -5px 5px #bebebe;
+            }
+
+            .error__t__over:nth-child(3):hover ~ .error__tilt__box {
+                transform: rotateX(-10deg) rotateY(-10deg);
+                box-shadow: 5px -5px 5px #bebebe;
+            }
+
+            .error__t__over:nth-child(4):hover ~ .error__tilt__box {
+                transform: rotateX(0deg) rotateY(10deg);
+                box-shadow: -5px 0px 5px #bebebe;
+            }
+
+            .error__t__over:nth-child(5):hover ~ .error__tilt__box {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            .error__t__over:nth-child(6):hover ~ .error__tilt__box {
+                transform: rotateX(0deg) rotateY(-10deg);
+                box-shadow: 5px 0px 5px #bebebe;
+            }
+
+            .error__t__over:nth-child(7):hover ~ .error__tilt__box {
+                transform: rotateX(10deg) rotateY(10deg);
+                box-shadow: -5px 5px 5px #bebebe;
+            }
+
+            .error__t__over:nth-child(8):hover ~ .error__tilt__box {
+                transform: rotateX(10deg) rotateY(0deg);
+                box-shadow: 0px 5px 5px #bebebe;
+            }
+
+            .error__t__over:nth-child(9):hover ~ .error__tilt__box {
+                transform: rotateX(10deg) rotateY(-10deg);
+                box-shadow: 5px 5px 5px #bebebe;
+            }
+
+            .error__tilt__box {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                transition: all 0.6s ease-out;
+                transform: rotateX(0deg) rotateY(0deg);
+                perspective: 1000px;
+                transform-style: preserve-3d;
+                align-items:center;
+                padding: 30px;
+            }
+
+            .error__title__box__img {
+                transform: translateZ(40px);
+                width: 100%;
+                text-align: center;
+                position: relative;
+                opacity: 0.3;
+
+                p {
+                    font-weight: bold;
+                    text-shadow: 1px 1px #f8f5f4, 
+                                 2px 2px #eeebea, 
+                }
+               
+            }
+
+        }
+    }
+      
+}

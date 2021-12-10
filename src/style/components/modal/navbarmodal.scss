@@ -1,0 +1,68 @@
+.navbar__modal {
+    background-color: #000000;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    animation: topAnimation 0.5s;
+    
+    .navbar__modal__button {
+        background-color: inherit;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        color: #e23f30;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    .navbar__modal__container {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        text-align: justify;
+        padding: 50px;
+        color: $fontMainColor;
+
+        .navbar__modal__item {
+            margin-right: 40px;
+            margin-left: 40px;
+
+            .navbar__modal__item__title{
+                font-size: $fontSizeMedium;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+    
+            li {
+                font-size: $fontSizeSmall;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                color: $fontNavbarModalColor;
+            }
+    
+            a:hover {
+                text-decoration: underline;
+            }
+
+        }
+
+       
+    }
+}
+
+@keyframes topAnimation {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }

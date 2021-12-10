@@ -1,0 +1,9 @@
+
+@mixin breakpint($point) {
+    @if $point == mobile {
+        @media(max-width: 500px) { @content; }
+    } 
+    @else if $point == tablet {
+        @media(max-width: 768px) { @content; }
+    }
+}

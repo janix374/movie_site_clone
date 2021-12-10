@@ -1,0 +1,50 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "parser": "babel-eslint",
+    "extends": ["airbnb", "prettier", "plugin:react/recommended"],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": ["react", "prettier"],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 100,
+          "trailingComma": "es5",
+          "semi": true,
+          "jsxSingleQuote": true,
+          "singleQuote": true,
+          "useTabs": true,
+          "endOfLine": "auto"
+        }
+      ],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/state-in-constructor": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/no-array-index-key": "off",
+      "no-unused-vars": [
+        "warn",
+        { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+      ],
+      "react/forbid-prop-types": "warn",
+      "import/no-extraneous-dependencies": "off",
+      "import/prefer-default-export": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react-a11y/click-events-have-key-events": "off",
+      "react/require-default-props": "off",
+      "consistent-return":"off"
+    }
+  }
+  

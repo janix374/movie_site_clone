@@ -1,0 +1,64 @@
+.row__movies {
+    color: $fontMainColor;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    h2 {
+        padding: 10px;
+    }
+    
+    .row__carousel {
+        height: 300px;
+        width: 100%;
+        // padding-top: 10px;
+        // padding-bottom: 10px;
+        position: relative;
+        display: flex;
+
+
+        .row__switch__left, .row__switch__right {
+            color: $fontMainColor;
+            font-weight: bold;
+            height: 100%;
+            line-height: 300px;
+            font-size: 50px;
+            text-align: center;
+            z-index: 3;
+            top: 0;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .row__slide__button_left, .row__slide__button_right {
+            opacity: 0.2;
+        }
+
+        .row__switch__left:hover {
+            .row__slide__button_left {
+                opacity: 1;
+                transition: opacity 0.2s linear 0.1s 
+            }  
+        }
+
+       .row__switch__right:hover {
+            .row__slide__button_right {
+                opacity: 1;
+                transition: opacity 0.2s linear 0.1s 
+            }  
+        }
+
+        .row__carousel__box {
+            display: flex;
+            flex-direction: row;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            align-items: center;
+            z-index: 1;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+                display: none;
+            }
+        }
+    }
+}

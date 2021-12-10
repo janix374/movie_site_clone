@@ -1,0 +1,24 @@
+@import './abstracts/mixins';
+
+@import './base/colors';
+@import './base/fonts';
+@import './base/margin-padding';
+@import './base/global';
+
+// views
+@import './views/movie.scss';
+
+// banner component
+@import './components/banner.scss';
+
+// row movies components
+@import './components/rowmovies/rowmovies.scss';
+@import './components/rowmovies/rowposter.scss';
+@import './components/rowmovies/rowmoviesbackdrop.scss';
+@import './components/rowmovies/rowposterbackdrop.scss';
+
+// loading component
+@import './components/loading.scss';
+@import './components/error.scss';
+@import './components//navbar/navbar.scss';
+@import './components/modal/navbarmodal.scss';
