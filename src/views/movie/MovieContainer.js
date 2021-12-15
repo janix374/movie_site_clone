@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import requests from '../../api/requests';
+import YoutubeTrailer from '../../components/youtubetrailer/YoutubeTrailer';
 
 const MovieContainer = ({ movie }) => (
 	<div className='movie__container'>
@@ -20,7 +21,7 @@ const MovieContainer = ({ movie }) => (
 				/>
 			</div>
 			<div className='movie__trailer__box'>
-				<p>video</p>
+				<YoutubeTrailer name={movie?.title} />
 			</div>
 		</section>
 

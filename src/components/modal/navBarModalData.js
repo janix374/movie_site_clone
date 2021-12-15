@@ -4,39 +4,22 @@ const listPages = [
 		title: 'Home',
 		path: '/',
 	},
-	{
-		id: 1,
-		title: 'Movies List',
-		path: '/movies',
-	},
-	{
-		id: 2,
-		title: 'Search',
-		path: '/search',
-	},
 ];
 
-const listMovieTypes = [
+const listMovie = [
 	{
 		id: 0,
-		title: 'Top Rated',
-		path: '/movies',
-	},
-	{
-		id: 1,
-		title: 'Action Movies',
-		path: '/movies',
-	},
-	{
-		id: 2,
-		title: 'Comedy Movies',
-		path: '/movies',
-	},
-	{
-		id: 3,
-		title: 'Horror Movies',
-		path: '/movies',
+		title: 'Movie List',
+		path: 'movies',
 	},
 ];
 
-export { listPages, listMovieTypes };
+const searchMovies = [
+	{
+		id: 0,
+		title: 'Search',
+		path: 'search',
+	},
+];
+
+export { listPages, listMovie, searchMovies };

@@ -1,0 +1,19 @@
+.youtube__component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+
+    .youtube__component__item {
+        flex-grow: 1;
+        text-align: center;
+        color: #e23f30;
+        font-size: $fontSizeMedium;
+
+        button {
+            background:#e23f30;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

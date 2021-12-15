@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MdHighlightOff, MdPlagiarism, MdTheaters } from 'react-icons/md';
-import { listPages, listMovieTypes } from './navBarModalData';
+import { MdHighlightOff, MdPlagiarism, MdTheaters, MdScreenSearchDesktop } from 'react-icons/md';
+import { listPages, listMovie, searchMovies } from './navBarModalData';
 import NavbarModalItem from './NavbarModalItem';
 
 const NavBarItemPages = NavbarModalItem(MdPlagiarism);
-const NavBarItemMoviesTypes = NavbarModalItem(MdTheaters);
+const NavBarItemMovies = NavbarModalItem(MdTheaters);
+const NavBarSearchMovie = NavbarModalItem(MdScreenSearchDesktop);
 
 const NavbarModal = ({ open, onClose }) => {
 	if (!open) return null;
@@ -19,7 +20,8 @@ const NavbarModal = ({ open, onClose }) => {
 
 			<div className='navbar__modal__container'>
 				<NavBarItemPages data={listPages} title='Pages' onClose={onClose} />
-				<NavBarItemMoviesTypes data={listMovieTypes} title='Movies' onClose={onClose} />
+				<NavBarItemMovies data={listMovie} title='Movies' onClose={onClose} />
+				<NavBarSearchMovie data={searchMovies} title='Search' onClose={onClose} />
 			</div>
 		</div>,
 		document.getElementById('portal')

@@ -6,7 +6,6 @@ import requests from '../../api/requests';
 const MoviesListCard = ({ title, poster, id, rating }) => (
 	<Link to={`/movie/${id}`}>
 		<div className='movie__list__card'>
-			{/* <div className='movie__list__card__badge'> */}
 			<div
 				className={
 					rating > 6.5
