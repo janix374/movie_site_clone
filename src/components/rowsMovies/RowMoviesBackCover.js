@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RowMovieBackdropPoster from './RowMovieBackdropPoster';
 import useAxiosFetch from '../../utils/hooks/useAxiosFetch';
 
-const RowMoviesBackDrop = ({ fetchUrl, title, scrollLeftToRight }) => {
+const RowMoviesBackCover = ({ fetchUrl, title, scrollLeftToRight }) => {
 	const { loading, dataHooks, error } = useAxiosFetch(fetchUrl);
 
 	if (loading) return <div />;
@@ -32,10 +32,10 @@ const RowMoviesBackDrop = ({ fetchUrl, title, scrollLeftToRight }) => {
 	);
 };
 
-RowMoviesBackDrop.propTypes = {
+RowMoviesBackCover.propTypes = {
 	title: PropTypes.string.isRequired,
 	fetchUrl: PropTypes.string.isRequired,
 	scrollLeftToRight: PropTypes.bool.isRequired,
 };
 
-export default RowMoviesBackDrop;
+export default RowMoviesBackCover;

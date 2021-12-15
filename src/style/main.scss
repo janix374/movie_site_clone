@@ -6,10 +6,12 @@
 @import './base/global';
 
 // views
-@import './views/movie.scss';
+@import './views/movie/movie.scss';
+@import './views/movies/movies.scss';
+@import './views/moviesearch/moviesearch.scss';
 
 // banner component
-@import './components/banner.scss';
+@import './components/banner/banner.scss';
 
 // row movies components
 @import './components/rowmovies/rowmovies.scss';
@@ -18,7 +20,8 @@
 @import './components/rowmovies/rowposterbackdrop.scss';
 
 // loading component
-@import './components/loading.scss';
-@import './components/error.scss';
+@import './components/loading/loading.scss';
+@import './components/errors/error.scss';
 @import './components//navbar/navbar.scss';
 @import './components/modal/navbarmodal.scss';
+@import './components/pagination//pagination.scss';

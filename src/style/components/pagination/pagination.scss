@@ -1,0 +1,22 @@
+.paggination__container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+
+    button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: $fontMainColor;
+        font-size: $fontSizeSmall;
+        padding: 15px;
+    }
+
+    button:hover {
+        text-decoration: underline;
+    }
+
+}

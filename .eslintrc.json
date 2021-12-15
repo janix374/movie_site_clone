@@ -44,7 +44,8 @@
       "react/jsx-props-no-spreading": "off",
       "react-a11y/click-events-have-key-events": "off",
       "react/require-default-props": "off",
-      "consistent-return":"off"
+      "consistent-return":"off",
+      "no-plusplus": "off"
     }
   }
   

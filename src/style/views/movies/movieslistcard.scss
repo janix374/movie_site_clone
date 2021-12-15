@@ -1,0 +1,42 @@
+.movie__list__card {
+    background-color: rgb(20, 20, 20);
+    padding: 10px 0px;
+    position: relative;
+    width: 200px;
+    text-align: center;
+    min-height: 320px;
+    margin: 15px;
+    border-radius: 15px;
+    color: rgb(175, 163, 163);
+
+    .movie__list__card__badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        padding: 5px 10px;
+        border-radius: 50%;
+        color: white;
+        z-index: 5;  
+    }
+
+    .badge__hot {
+        background: rgb(211, 74, 149);
+    }
+
+    .badge__cold {
+        background: rgb(50, 112, 184);  
+    }
+
+    .movie__list__card__poster {
+        height: 250px;
+        width: 170px;
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+   
+}

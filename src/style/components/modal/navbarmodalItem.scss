@@ -1,0 +1,33 @@
+.navbar__modal__item {
+        margin: 30px;
+
+        .navbar__modal__item__title{
+            font-size: $fontSizeMedium;
+            display: flex;
+
+            .navbar__modal__icon {
+                color: #e23f30;
+                padding: 3px;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            padding-left: 35px;
+        }
+
+        li {
+            font-size: $fontSizeSmall;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: $fontNavbarModalColor;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+   
+}

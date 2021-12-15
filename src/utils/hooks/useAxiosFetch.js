@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+// eslint-disable-next-line camelcase
+import { unstable_batchedUpdates } from 'react-dom';
 import useMountedRef from './useMountedRef';
 import axios from '../../api/axios';
 

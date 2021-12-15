@@ -5,7 +5,7 @@ import MoviesListPage from './views/movies/MoviesListPage';
 import Movie from './views/movie/MoviePage';
 import NotFound from './views/notfound/NotFoundPage';
 import Navbar from './components/navbar/Navbar';
-import NavbarModal from './components/modal/NavbarModal';
+import MovieSearchPage from './views/search/MovieSearchPage';
 
 const App = () => (
 	<div className='app'>
@@ -16,6 +16,7 @@ const App = () => (
 				<Route path='/' element={<HomePage />} />
 				<Route path='movies' element={<MoviesListPage />} />
 				<Route path='movie/:movie' element={<Movie />} />
+				<Route path='search' element={<MovieSearchPage />} />
 			</Routes>
 		</BrowserRouter>
 	</div>

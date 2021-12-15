@@ -47,8 +47,8 @@
     .movie__details {
         .movie__details__button {
             padding: 1rem 0;
-            display: inline-flex;
-            flex-wrap: nowrap;
+            display: flex;
+            flex-wrap: wrap;
 
             a {
                 border: 2px solid $fontMainColor;

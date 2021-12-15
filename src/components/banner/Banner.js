@@ -32,7 +32,7 @@ const Banner = () => {
 						<Link to='movies'>Movie List</Link>
 					</button>
 				</div>
-				<h1 className='banner__description'>{truncate(movie?.overview, 150)}</h1>
+				<h1 className='banner__description'>{movie && truncate(movie?.overview, 150)}</h1>
 			</div>
 			<div className='banner__fadeBottom' />
 		</header>

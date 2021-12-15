@@ -27,7 +27,7 @@ const MovieContainer = ({ movie }) => (
 		<section className='movie__details'>
 			<div className='movie__details__button'>
 				{movie.genres.map((item) => (
-					<Link to='movies' key={item.id}>
+					<Link to='/movies' state={{ genreIdState: `${item.id}` }} key={item.id}>
 						{item.name}
 					</Link>
 				))}

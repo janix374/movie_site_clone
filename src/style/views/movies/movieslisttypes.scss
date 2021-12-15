@@ -1,0 +1,51 @@
+.genres {
+    width: 90%;
+    padding-top: 40px;
+    margin: 0 auto;
+
+    .genres__button {
+        padding: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        button {
+            border: 2px solid $fontMainColor;
+            color: $fontMainColor;
+            border-radius: 1rem;
+            font-size: $fontSizeSmall;
+            padding: 0.3rem 0.8rem;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: relative;
+            background-color: inherit;
+            z-index: 1;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.02rem;
+        }
+
+        button::before {
+            content: '';
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            z-index: 0;
+            background: currentColor;
+        }
+
+        button:hover {
+            &::before {
+                opacity: 0.2;
+            }
+        }
+
+        .genres__button__active {
+            opacity: 1;
+            background: rgb(168, 161, 161);
+        }
+    }
+    
+}
