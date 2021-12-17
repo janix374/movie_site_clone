@@ -7,17 +7,18 @@ import MoviesListDisplay from './MoviesListDisplay';
 const MoviesListPage = () => {
 	const location = useLocation();
 	const [genreId, setGenereId] = useState(
-		location.state == null ? 28 : Number(location.state.genreIdState)
+		location.state == null ? 28 : Number(location.state.genre)
 	);
-
+	const [page, setPage] = useState(location.state == null ? 1 : Number(location.state.page));
 	return (
 		<div className='movies'>
 			<MoviesListTypes
 				fetchUrlMoviesTypes={requests.fetchGenresMovies}
 				setGenereId={setGenereId}
 				genreId={genreId}
+				setPage={setPage}
 			/>
-			{genreId && <MoviesListDisplay genre={genreId} />}
+			{genreId && page && <MoviesListDisplay genre={genreId} page={page} setPage={setPage} />}
 		</div>
 	);
 };

@@ -1,0 +1,10 @@
+.movies__search__list {
+    
+    .movies__search__list__cards {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}

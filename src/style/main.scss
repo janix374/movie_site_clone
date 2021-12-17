@@ -5,13 +5,17 @@
 @import './base/margin-padding';
 @import './base/global';
 
+// custom buttons
+@import './components/common/buttons.scss';
+
+// banners
+@import './components/banner/banner.scss';
+
 // views
 @import './views/movie/movie.scss';
 @import './views/movies/movies.scss';
 @import './views/moviesearch/moviesearch.scss';
 
-// banner component
-@import './components/banner/banner.scss';
 
 // row movies components
 @import './components/rowmovies/rowmovies.scss';
@@ -26,3 +30,5 @@
 @import './components/modal/navbarmodal.scss';
 @import './components/pagination//pagination.scss';
 @import './components/youtubetrailer/youtubetrailer.scss';
+@import './components/moviescomponent/moviecard.scss';
+

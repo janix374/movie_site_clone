@@ -1,0 +1,41 @@
+.goback__button__container {
+    width: 100%;
+    min-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .goback__button {
+        border: 2px solid $fontMainColor;
+        color: $fontMainColor;
+        border-radius: 1rem;
+        font-size: $fontSizeSmall;
+        padding: 0.3rem 0.8rem;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: relative;
+        background-color: inherit;
+        z-index: 1;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.02rem;
+    }
+
+    .goback__button::before {
+        content: '';
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        z-index: 0;
+        background: currentColor;
+    }
+
+    .goback__button:hover {
+        &::before {
+            opacity: 0.2;
+        }
+    }
+}

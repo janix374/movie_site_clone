@@ -6,10 +6,12 @@ import Movie from './views/movie/MoviePage';
 import NotFound from './views/notfound/NotFoundPage';
 import Navbar from './components/navbar/Navbar';
 import MovieSearchPage from './views/search/MovieSearchPage';
+import ScrollToTop from './components/scrolltothetop/ScrollToTop';
 
 const App = () => (
 	<div className='app'>
 		<BrowserRouter>
+			<ScrollToTop />
 			<Navbar />
 			<Routes>
 				<Route path='*' element={<NotFound />} />

@@ -25,7 +25,14 @@
             color: $fontNavbarModalColor;
         }
 
-        a:hover {
+        button {
+            border: none;
+            background: none;
+            color: $fontNavbarModalColor;
+            cursor: pointer;
+        }
+
+        button:hover {
             text-decoration: underline;
         }
 

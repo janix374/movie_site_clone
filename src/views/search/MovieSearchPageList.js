@@ -1,31 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import requests from '../../api/requests';
-import Pagination from '../../components/pagination/Pagination';
 import useAxiosFetch from '../../utils/hooks/useAxiosFetch';
 import LoadingComponent from '../../components/loading/LoadingComponent';
-import ErrorComponent from '../../components/errors/ErrorComponent';
 import MoviesCard from '../../components/moviescomponent/MoviesCard';
+import Pagination from '../../components/pagination/Pagination';
 
-const MovieListDisplay = ({ genre, page, setPage }) => {
-	const { loading, dataHooks, error } = useAxiosFetch(requests.fetchMovieByTypes(genre, page));
+const MovieSearchPageList = ({ searchText, page, setPage }) => {
+	const { loading, dataHooks, error } = useAxiosFetch(requests.fetchSearchMovie(searchText, page));
 
 	if (loading) return <LoadingComponent />;
-	if (error) return <ErrorComponent text='Something went wrong' />;
+	if (error) return '';
 
 	return (
-		<div className='movies__list'>
-			<div className='movie__list__cards'>
+		<div className='movies__search__list'>
+			<div className='movies__search__list__cards'>
 				{dataHooks.data.results.map((item) => (
 					<MoviesCard
 						key={item.id}
-						title={item.title}
+						title={item?.title}
 						poster={item?.poster_path}
 						id={item.id}
 						rating={item.vote_average}
-						genre={genre}
+						path='/search'
+						text={searchText}
 						page={page}
-						path='/movies'
 					/>
 				))}
 			</div>
@@ -38,10 +37,10 @@ const MovieListDisplay = ({ genre, page, setPage }) => {
 	);
 };
 
-MovieListDisplay.propTypes = {
-	genre: PropTypes.number.isRequired,
+MovieSearchPageList.propTypes = {
+	searchText: PropTypes.string.isRequired,
 	page: PropTypes.number.isRequired,
 	setPage: PropTypes.func.isRequired,
 };
 
-export default MovieListDisplay;
+export default MovieSearchPageList;

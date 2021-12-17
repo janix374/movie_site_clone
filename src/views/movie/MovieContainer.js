@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import requests from '../../api/requests';
 import YoutubeTrailer from '../../components/youtubetrailer/YoutubeTrailer';
+import errorPhoto from '../../assets/image/errorphoto.jpg';
 
 const MovieContainer = ({ movie }) => (
 	<div className='movie__container'>
@@ -14,11 +15,15 @@ const MovieContainer = ({ movie }) => (
 
 		<section className='movie__trailer'>
 			<div className='movie__trailer__img__box'>
-				<img
-					src={`${requests.imgTMDB}${movie.poster_path}`}
-					alt=''
-					className='movie__trailer__img'
-				/>
+				{movie.poster_path !== null ? (
+					<img
+						src={`${requests.imgTMDB}${movie.poster_path}`}
+						alt=''
+						className='movie__trailer__img'
+					/>
+				) : (
+					<img src={errorPhoto} alt='' className='movie__trailer__img' />
+				)}
 			</div>
 			<div className='movie__trailer__box'>
 				<YoutubeTrailer name={movie?.title} />
@@ -28,13 +33,13 @@ const MovieContainer = ({ movie }) => (
 		<section className='movie__details'>
 			<div className='movie__details__button'>
 				{movie.genres.map((item) => (
-					<Link to='/movies' state={{ genreIdState: `${item.id}` }} key={item.id}>
+					<Link to='/movies' state={{ genre: `${item.id}`, page: 1 }} key={item.id}>
 						{item.name}
 					</Link>
 				))}
 			</div>
 			<div className='movie__details__text'>
-				<p>{movie.overview}</p>
+				<p className='movie__details__overview'>{movie.overview}</p>
 				<p>
 					Production countries:{' '}
 					{movie.production_countries.map((item) => (

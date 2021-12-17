@@ -1,3 +1,5 @@
+@import './moviesserchlist.scss';
+
 // movies search box
 .movies__search {
     color: $fontMainColor;
@@ -33,10 +35,5 @@
             }
         }
     }
-
-    .movies__search__list__container {
-
-    }
-
 
 }

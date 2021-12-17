@@ -11,6 +11,8 @@ const requests = {
 		`/movie/${id}?api_key=${process.env.REACT_APP_TMDB_PUBLIC_KEY}&language=en-US`,
 	fetchMovieByTypes: (type, page) =>
 		`/discover/movie?api_key=${process.env.REACT_APP_TMDB_PUBLIC_KEY}&with_genres=${type}&page=${page}`,
+	fetchSearchMovie: (searchText, page) =>
+		`/search/movie?api_key=${process.env.REACT_APP_TMDB_PUBLIC_KEY}&query=${searchText}&page=${page}`,
 	imgTMDB: `https://image.tmdb.org/t/p/original`,
 };
 

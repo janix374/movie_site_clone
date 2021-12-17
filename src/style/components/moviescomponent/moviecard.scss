@@ -1,4 +1,4 @@
-.movie__list__card {
+.movie__card {
     background-color: rgb(20, 20, 20);
     padding: 10px 0px;
     position: relative;
@@ -9,7 +9,7 @@
     border-radius: 15px;
     color: rgb(175, 163, 163);
 
-    .movie__list__card__badge {
+    .movie__card__badge {
         position: absolute;
         top: -10px;
         right: -10px;
@@ -27,7 +27,7 @@
         background: rgb(50, 112, 184);  
     }
 
-    .movie__list__card__poster {
+    .movie__card__poster {
         height: 250px;
         width: 170px;
         position: relative;
