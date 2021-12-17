@@ -5,8 +5,11 @@
 
     .genres__button {
         padding: 1rem 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 
         button {
             border: 2px solid $fontMainColor;
@@ -14,7 +17,8 @@
             border-radius: 1rem;
             font-size: $fontSizeSmall;
             padding: 0.3rem 0.8rem;
-            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
             cursor: pointer;
             position: relative;
             background-color: inherit;
@@ -47,5 +51,41 @@
             background: rgb(168, 161, 161);
         }
     }
+
+    .genres__select{
+        text-align: center;
+        margin-bottom: 30px;
+        display: none;
+       
+        select {
+            color: $fontMainColor;
+            background-color: $mainBackgroundColor;
+            padding: 10px;
+            cursor: pointer;
+            border: 2px solid #ffffff;
+            font-size: $fontSizeSmall;
+            height: 50px; 
+        }
+        
+    }
     
+}
+
+@include breakpint(tablet) {
+    .genres {
+
+        .genres__button {
+            display: none;
+        }
+
+        .genres__select{
+            display: block;
+
+            select {
+                font-size: 0.8rem;
+                padding: 0px;
+            }
+           
+        }
+    }
 }

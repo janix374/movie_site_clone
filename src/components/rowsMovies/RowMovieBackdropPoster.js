@@ -4,11 +4,14 @@ import requests from '../../api/requests';
 
 const RowMovieBackdropPoster = ({ poster, title }) => (
 	<div className='row__backdrop__poster'>
-		<img
-			className='row__backdrop__image'
-			src={`${requests.imgTMDB}/${poster}`}
-			alt='movie back cover'
-		/>
+		{poster && (
+			<img
+				className='row__backdrop__image'
+				src={`${requests.imgTMDB}/${poster}`}
+				alt='movie back cover'
+			/>
+		)}
+
 		<div className='row__backdrop__poster__title' title={title}>
 			<p>{title}</p>
 		</div>
@@ -16,7 +19,7 @@ const RowMovieBackdropPoster = ({ poster, title }) => (
 );
 
 RowMovieBackdropPoster.propTypes = {
-	poster: PropTypes.string.isRequired,
+	poster: PropTypes.string,
 	title: PropTypes.string.isRequired,
 };
 

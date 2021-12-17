@@ -10,12 +10,16 @@
     .row__movies__backdrop__carousel {
         height: 170px;
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         overflow: hidden;
         width: 100%;
     }
 
     .row__movies__backdrop__carousel::before {
+        background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(31, 31, 31, 1)), to(rgba(31, 31, 31, 0)));
+        background: -o-linear-gradient(left, rgba(31, 31, 31, 1) 50%, rgba(31, 31, 31, 0) 100%);
         background: linear-gradient(to right, rgba(31, 31, 31, 1) 50%, rgba(31, 31, 31, 0) 100%);
         height: 100%;
         content: ' ';
@@ -27,7 +31,9 @@
     }
 
     .row__movies__backdrop__carousel::after {
-        background: linear-gradient(to left, rgba(31, 31, 31, 1) 50%, rgba(31, 31, 31, 0) 100%);
+        background: -webkit-gradient(linear, right top, left top, color-stop(50%, rgba(31, 31, 31, 1)), to(rgba(31, 31, 31, 0)));
+       background: -o-linear-gradient(right, rgba(31, 31, 31, 1) 50%, rgba(31, 31, 31, 0) 100%);
+       background: linear-gradient(to left, rgba(31, 31, 31, 1) 50%, rgba(31, 31, 31, 0) 100%);
         height: 100%;
         content: ' ';
         position: absolute;
@@ -39,32 +45,59 @@
 
     .row__movies__backdrop__carousel__box__left__to__right {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         z-index: 1;
         position: relative;  
-        animation: scrollingRight 200s linear infinite;
+        -webkit-animation: scrollingRight 200s linear infinite;  
+                animation: scrollingRight 200s linear infinite;
     }
 
      .row__movies__backdrop__carousel__box__right__to__left {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         z-index: 1;
         position: relative;  
-        animation: scrollingLeft 150s linear infinite;
+        -webkit-animation: scrollingLeft 150s linear infinite;  
+                animation: scrollingLeft 150s linear infinite;
     }
 
 }
 
+@-webkit-keyframes scrollingRight {
+    0% { -webkit-transform: translateX(100vw); transform: translateX(100vw); }
+    100% { -webkit-transform: translateX(calc(-1*300px*21)); transform: translateX(calc(-1*300px*21)); }
+}
+
+
 @keyframes scrollingRight {
-    0% { transform: translateX(100vw); }
-    100% { transform: translateX(calc(-1*300px*21)); }
+    0% { -webkit-transform: translateX(100vw); transform: translateX(100vw); }
+    100% { -webkit-transform: translateX(calc(-1*300px*21)); transform: translateX(calc(-1*300px*21)); }
+}
+
+@-webkit-keyframes scrollingLeft {
+    0% { -webkit-transform: translateX(calc(-1*300px*21)); transform: translateX(calc(-1*300px*21)); }
+    100% { -webkit-transform: translateX(100vw); transform: translateX(100vw); }
 }
 
 @keyframes scrollingLeft {
-    0% { transform: translateX(calc(-1*300px*21)); }
-    100% { transform: translateX(100vw); }
+    0% { -webkit-transform: translateX(calc(-1*300px*21)); transform: translateX(calc(-1*300px*21)); }
+    100% { -webkit-transform: translateX(100vw); transform: translateX(100vw); }
 }

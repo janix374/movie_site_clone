@@ -5,13 +5,17 @@ import { useNavigate } from 'react-router-dom';
 const GoBackButton = ({ display, fontsize, comeFromPage }) => {
 	const navigate = useNavigate();
 	const handleGoBack = () => {
-		navigate(comeFromPage.path, {
-			state: {
-				genre: comeFromPage.genre,
-				page: comeFromPage.page,
-				text: comeFromPage.text,
-			},
-		});
+		if (comeFromPage == null) {
+			navigate('/');
+		} else {
+			navigate(comeFromPage.path, {
+				state: {
+					genre: comeFromPage.genre,
+					page: comeFromPage.page,
+					text: comeFromPage.text,
+				},
+			});
+		}
 	};
 
 	return (
@@ -36,7 +40,7 @@ GoBackButton.propTypes = {
 		page: PropTypes.number,
 		path: PropTypes.string,
 		text: PropTypes.string,
-	}).isRequired,
+	}),
 };
 
 export default GoBackButton;

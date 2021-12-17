@@ -20,7 +20,7 @@ const Pagination = ({ currentPage, setCurrentPage, totalPage }) => {
 				</p>
 			</div>
 			{currentPage <= 1 ? null : (
-				<div className='paggination__container__line'>
+				<div>
 					<button type='button' onClick={() => handlePrevBtn()}>
 						Previous
 					</button>

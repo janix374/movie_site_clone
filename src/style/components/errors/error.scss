@@ -3,10 +3,19 @@
     height: 100vh;
     color: #ffffff;
     font-size: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: $mainBackgroundColor;
 
     .error__tilt__flex__container {
@@ -14,12 +23,19 @@
         .error__tilt__box__wrap {
             width: 100%;
             position: relative;
+            -webkit-transition: all 0.6s ease-out;
+            -o-transition: all 0.6s ease-out;
             transition: all 0.6s ease-out;
-            perspective: 1000px;
+            -webkit-perspective: 1000px;
+                    perspective: 1000px;
 
             &:hover {
+                -webkit-transition: all 0.3s linear;
+                -o-transition: all 0.3s linear;
                 transition: all 0.3s linear;
-                transform: scale(1.02);
+                          -webkit-transform: scale(1.02);
+                              -ms-transform: scale(1.02);
+                                  transform: scale(1.02);
             }
 
             .error__t__over {
@@ -75,68 +91,95 @@
             }
 
             .error__t__over:nth-child(1):hover ~ .error__tilt__box {
+                -webkit-transform: rotateX(-10deg) rotateY(10deg);
                 transform: rotateX(-10deg) rotateY(10deg);
-                box-shadow: -5px -5px 5px #bebebe;
+                -webkit-box-shadow: -5px -5px 5px #bebebe;
+                        box-shadow: -5px -5px 5px #bebebe;
             }
 
             .error__t__over:nth-child(2):hover ~ .error__tilt__box {
+                -webkit-transform: rotateX(-10deg) rotateY(0deg);
                 transform: rotateX(-10deg) rotateY(0deg);
-                box-shadow: 0px -5px 5px #bebebe;
+                -webkit-box-shadow: 0px -5px 5px #bebebe;
+                        box-shadow: 0px -5px 5px #bebebe;
             }
 
             .error__t__over:nth-child(3):hover ~ .error__tilt__box {
+                -webkit-transform: rotateX(-10deg) rotateY(-10deg);
                 transform: rotateX(-10deg) rotateY(-10deg);
-                box-shadow: 5px -5px 5px #bebebe;
+                 -webkit-box-shadow: 5px -5px 5px #bebebe;
+                         box-shadow: 5px -5px 5px #bebebe;
             }
 
             .error__t__over:nth-child(4):hover ~ .error__tilt__box {
+                -webkit-transform: rotateX(0deg) rotateY(10deg);
                 transform: rotateX(0deg) rotateY(10deg);
-                box-shadow: -5px 0px 5px #bebebe;
+                  -webkit-box-shadow: -5px 0px 5px #bebebe;
+                          box-shadow: -5px 0px 5px #bebebe;
             }
 
             .error__t__over:nth-child(5):hover ~ .error__tilt__box {
+                -webkit-transform: rotateX(0deg) rotateY(0deg);
                 transform: rotateX(0deg) rotateY(0deg);
             }
 
             .error__t__over:nth-child(6):hover ~ .error__tilt__box {
+                -webkit-transform: rotateX(0deg) rotateY(-10deg);
                 transform: rotateX(0deg) rotateY(-10deg);
-                box-shadow: 5px 0px 5px #bebebe;
+                  -webkit-box-shadow: 5px 0px 5px #bebebe;
+                          box-shadow: 5px 0px 5px #bebebe;
             }
 
             .error__t__over:nth-child(7):hover ~ .error__tilt__box {
+                -webkit-transform: rotateX(10deg) rotateY(10deg);
                 transform: rotateX(10deg) rotateY(10deg);
-                box-shadow: -5px 5px 5px #bebebe;
+                  -webkit-box-shadow: -5px 5px 5px #bebebe;
+                          box-shadow: -5px 5px 5px #bebebe;
             }
 
             .error__t__over:nth-child(8):hover ~ .error__tilt__box {
-                transform: rotateX(10deg) rotateY(0deg);
-                box-shadow: 0px 5px 5px #bebebe;
+               -webkit-transform: rotateX(10deg) rotateY(0deg);
+              transform: rotateX(10deg) rotateY(0deg);
+                -webkit-box-shadow: 0px 5px 5px #bebebe;
+                        box-shadow: 0px 5px 5px #bebebe;
             }
 
             .error__t__over:nth-child(9):hover ~ .error__tilt__box {
+                -webkit-transform: rotateX(10deg) rotateY(-10deg);
                 transform: rotateX(10deg) rotateY(-10deg);
-                box-shadow: 5px 5px 5px #bebebe;
+                   -webkit-box-shadow: 5px 5px 5px #bebebe;
+                           box-shadow: 5px 5px 5px #bebebe;
             }
 
             .error__tilt__box {
                 width: 100%;
                 height: 100%;
                 position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-transition: all 0.6s ease-out;
+                -o-transition: all 0.6s ease-out;
                 transition: all 0.6s ease-out;
-                transform: rotateX(0deg) rotateY(0deg);
-                perspective: 1000px;
-                transform-style: preserve-3d;
-                align-items:center;
+                -webkit-transform: rotateX(0deg) rotateY(0deg);
+                        transform: rotateX(0deg) rotateY(0deg);
+                -webkit-perspective: 1000px;
+                        perspective: 1000px;
+                -webkit-transform-style: preserve-3d;
+                        transform-style: preserve-3d;
+                -webkit-box-align:center;
+                    -ms-flex-align:center;
+                        align-items:center;
                 padding: 30px;
             }
 
             .error__title__box__img {
+                -webkit-transform: translateZ(40px);
                 transform: translateZ(40px);
-                width: 100%;
-                text-align: center;
-                position: relative;
-                opacity: 0.3;
+                  width: 100%;
+                  text-align: center;
+                  position: relative;
+                  opacity: 0.3;
 
                 p {
                     font-weight: bold;

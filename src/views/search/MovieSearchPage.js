@@ -21,6 +21,7 @@ const MovieSearchPage = () => {
 						placeholder='Search..'
 						onChange={(e) => handleOnchange(e.target.value)}
 						value={searchText}
+						maxLength='50'
 					/>
 					<button type='button'>
 						<MdZoomIn size={30} />

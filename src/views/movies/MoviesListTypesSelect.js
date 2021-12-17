@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useAxiosFetch from '../../utils/hooks/useAxiosFetch';
 
-const MoviesListTypes = ({ fetchUrlMoviesTypes, setGenereId, genreId, setPage }) => {
+const MoviesListTypesSelect = ({ fetchUrlMoviesTypes, setGenereId, genreId, setPage }) => {
 	const { loading, dataHooks, error } = useAxiosFetch(fetchUrlMoviesTypes);
 
 	if (loading) return '';
@@ -13,13 +13,7 @@ const MoviesListTypes = ({ fetchUrlMoviesTypes, setGenereId, genreId, setPage })
 		setPage(1);
 	};
 
-	const handleChange = (event) => {
-		setGenereId(Number(event.target.value));
-		setPage(1);
-	};
-
 	const { genres } = dataHooks.data;
-
 	return (
 		<div className='genres'>
 			<div className='genres__button'>
@@ -35,25 +29,22 @@ const MoviesListTypes = ({ fetchUrlMoviesTypes, setGenereId, genreId, setPage })
 				))}
 			</div>
 			<div className='genres__select'>
-				<form>
-					<select name='genres' onChange={handleChange}>
-						{genres.map((item) => (
-							<option value={item.id} key={item.id}>
-								{item.name}
-							</option>
-						))}
-					</select>
-				</form>
+				<select name='genres' className='genres__select__class'>
+					<option value='volvo'>Volvo</option>
+					<option value='saab'>Saab</option>
+					<option value='mercedes'>Mercedes</option>
+					<option value='audi'>Audi</option>
+				</select>
 			</div>
 		</div>
 	);
 };
 
-MoviesListTypes.propTypes = {
+MoviesListTypesSelect.propTypes = {
 	fetchUrlMoviesTypes: PropTypes.string.isRequired,
 	setGenereId: PropTypes.func.isRequired,
 	genreId: PropTypes.number.isRequired,
 	setPage: PropTypes.func.isRequired,
 };
 
-export default MoviesListTypes;
+export default MoviesListTypesSelect;

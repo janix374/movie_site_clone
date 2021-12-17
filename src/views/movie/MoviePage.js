@@ -18,7 +18,6 @@ const MoviePage = () => {
 
 	const movie = dataHooks.data;
 
-	console.log(location);
 	return (
 		<div className='movie'>
 			<MovieContainer movie={movie} comeFromPage={location.state} />

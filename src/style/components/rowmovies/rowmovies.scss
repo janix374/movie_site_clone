@@ -10,11 +10,10 @@
     .row__carousel {
         height: 300px;
         width: 100%;
-        // padding-top: 10px;
-        // padding-bottom: 10px;
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-
 
         .row__switch__left, .row__switch__right {
             color: $fontMainColor;
@@ -40,6 +39,8 @@
         .row__switch__left:hover {
             .row__slide__button_left {
                 opacity: 1;
+                -webkit-transition: opacity 0.2s linear 0.1s;
+                -o-transition: opacity 0.2s linear 0.1s;
                 transition: opacity 0.2s linear 0.1s 
             }  
         }
@@ -47,17 +48,26 @@
        .row__switch__right:hover {
             .row__slide__button_right {
                 opacity: 1;
+                -webkit-transition: opacity 0.2s linear 0.1s;
+                -o-transition: opacity 0.2s linear 0.1s;
                 transition: opacity 0.2s linear 0.1s 
             }  
         }
 
         .row__carousel__box {
-            display: flex;
-            flex-direction: row;
-            overflow-y: hidden;
-            overflow-x: scroll;
-            align-items: center;
-            z-index: 1;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                 -webkit-box-orient: horizontal;
+                 -webkit-box-direction: normal;
+                     -ms-flex-direction: row;
+                         flex-direction: row;
+                 overflow-y: hidden;
+                 overflow-x: scroll;
+                 -webkit-box-align: center;
+                     -ms-flex-align: center;
+                         align-items: center;
+                 z-index: 1;
 
             &::-webkit-scrollbar {
                 width: 10px;

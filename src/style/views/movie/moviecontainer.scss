@@ -25,12 +25,22 @@
     // section movie poster and trailer
     .movie__trailer {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         min-height: 500px;
-        justify-content: flex-start;
-        align-items: stretch;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
         gap: 20px;
         margin-bottom: 20px;
 
@@ -45,8 +55,10 @@
        }
 
        .movie__trailer__box {
-            background-color: rgb(20, 20, 20);
-            flex-grow: 4;
+        background-color: rgb(20, 20, 20);
+        -webkit-box-flex: 4;
+            -ms-flex-positive: 4;
+                flex-grow: 4;
        }
     }
 
@@ -54,15 +66,19 @@
     .movie__details {
         .movie__details__button {
             padding: 1rem 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
 
             a {
                 border: 2px solid $fontMainColor;
                 border-radius: 1rem;
                 font-size: $fontSizeSmall;
                 padding: 0.3rem 0.8rem;
-                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
                 cursor: pointer;
                 position: relative;
                 overflow: hidden;
@@ -108,4 +124,10 @@
         }
     }
 
+}
+
+@include breakpint(tablet) {
+    .movie__container {
+        width: 90%;
+    }
 }

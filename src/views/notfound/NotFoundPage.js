@@ -3,8 +3,8 @@ import React from 'react';
 const NotFoundPage = () => {
 	console.log('page not found');
 	return (
-		<div>
-			<p>not found page</p>
+		<div className='page__not__found'>
+			<p>Page not found</p>
 		</div>
 	);
 };

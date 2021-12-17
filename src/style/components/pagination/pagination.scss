@@ -3,8 +3,24 @@
     margin: 0 auto;
     text-align: center;
     height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
     justify-content: center;
+
+    .paggination__container__line {
+        height: 50px;
+        border-right: 1px solid #ffffff;
+    }
+
+    p {
+        color: $fontMainColor;
+        font-size: $fontSizeSmall;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 
     button {
         cursor: pointer;

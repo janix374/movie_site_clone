@@ -3,6 +3,8 @@
 
         .navbar__modal__item__title{
             font-size: $fontSizeMedium;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
 
             .navbar__modal__icon {

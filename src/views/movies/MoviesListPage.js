@@ -10,6 +10,7 @@ const MoviesListPage = () => {
 		location.state == null ? 28 : Number(location.state.genre)
 	);
 	const [page, setPage] = useState(location.state == null ? 1 : Number(location.state.page));
+
 	return (
 		<div className='movies'>
 			<MoviesListTypes

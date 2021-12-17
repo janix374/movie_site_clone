@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.24.0",
+    "gh-pages": "^3.2.3",
     "movie-trailer": "^2.1.0",
     "node-sass": "^4.14.1",
     "react": "^17.0.2",
@@ -17,11 +18,13 @@
     "react-youtube": "^7.13.1",
     "web-vitals": "^1.0.1"
   },
+  "homepage": "https://janix374.github.io/movie_site_clone/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

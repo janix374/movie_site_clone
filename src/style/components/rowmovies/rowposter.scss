@@ -4,7 +4,11 @@
     width: 167px;
     margin-left: 10px;
     margin-right: 10px;
+    -webkit-transition: -webkit-transform 450ms;
+    transition: -webkit-transform 450ms;
+    -o-transition: transform 450ms;
     transition: transform 450ms;
+    transition: transform 450ms, -webkit-transform 450ms;
     position: relative;
 
     .row__image {
@@ -18,6 +22,8 @@
         text-align: center;
         background-color: rgba(0, 0, 0, 0.7);
         bottom: 0;
+        -webkit-transition: opacity 0.3s ease-out 0.4s;
+        -o-transition: opacity 0.3s ease-out 0.4s;
         transition: opacity 0.3s ease-out 0.4s;
         opacity: 0;
 
@@ -27,12 +33,24 @@
     } 
 
     &:hover {
-        transform: scale(1.08);
+        -webkit-transform: scale(1.08);
+        -ms-transform: scale(1.08);
+            transform: scale(1.08);
         
         .row__poster__title {
+            -webkit-transition: opacity 0.3 ease-out 0.3s;
+             -o-transition: opacity 0.3 ease-out 0.3s;
             transition: opacity 0.3 ease-out 0.3s;  
-            opacity: 1;  
+            opacity: 1; 
         }
 
     }
+}
+
+@include breakpint(tablet){  
+    .row__poster {
+        .row__poster__title {
+            opacity: 1;
+        } 
+    }  
 }
