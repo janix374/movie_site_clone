@@ -1,0 +1,15 @@
+@import './footerrights.scss';
+@import './footericons.scss';
+
+.footer {
+    padding-top: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@include breakpint(tablet) {
+    .footer {
+        width: 100%;  
+        margin: 0;
+    }
+}

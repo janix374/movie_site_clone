@@ -62,6 +62,20 @@ const MovieContainer = ({ movie }) => (
 				</p>
 			</div>
 		</section>
+
+		<section className='movie__backdrop'>
+			<div className='movie__backdrop__img__box'>
+				{movie.backdrop_path !== null ? (
+					<img
+						src={`${requests.imgTMDB}${movie.backdrop_path}`}
+						alt=''
+						className='movie__backdrop__img'
+					/>
+				) : (
+					<div />
+				)}
+			</div>
+		</section>
 	</div>
 );
 

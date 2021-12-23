@@ -7,11 +7,9 @@ import requests from '../../api/requests';
 const HomePage = () => (
 	<div className='home'>
 		<Banner />
-		<RowMovies title='Fetch Top Rated' fetchUrl={requests.fetchTopRated} />
-		<RowMoviesBackCover
-			title='Top rated'
-			fetchUrl={requests.fetchTopRated}
-			scrollLeftToRight={false}
+		<RowMovies
+			title='Fetch Top Rated'
+			fetchUrl={requests.fetchTopRated(Math.floor(Math.random() * 100) + 1)}
 		/>
 		<RowMoviesBackCover
 			title='Action movies'
@@ -32,6 +30,11 @@ const HomePage = () => (
 			title='Romance movies'
 			fetchUrl={requests.fetchMovieByTypes(10751, 1)}
 			scrollLeftToRight={false}
+		/>
+		<RowMoviesBackCover
+			title='Documentary'
+			fetchUrl={requests.fetchDocumentaries}
+			scrollLeftToRight
 		/>
 	</div>
 );

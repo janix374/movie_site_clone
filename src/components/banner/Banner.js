@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import requests from '../../api/requests';
 import useAxiosFetch from '../../utils/hooks/useAxiosFetch';
 import BannerError from './BannerError';
+import moviesbanner from '../../assets/image/moviesbanner.jpg';
 
 const Banner = () => {
-	const { loading, dataHooks, error } = useAxiosFetch(requests.fetchNetflixOriginals);
+	const { loading, dataHooks, error } = useAxiosFetch(requests.fetchAllMovies);
 
 	let movie = {};
 	if (loading) return <BannerError />;
@@ -18,7 +19,10 @@ const Banner = () => {
 		<header
 			className='banner'
 			style={{
-				backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+				backgroundImage:
+					movie.backdrop_path === null
+						? `url(${moviesbanner})`
+						: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
 			}}
 		>
 			<div className='banner__contents'>

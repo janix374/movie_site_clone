@@ -1,0 +1,17 @@
+.footer__rights {
+    color: $fontFooterColor;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid $fontFooterColor;
+
+    .footer__rights__img {
+        img {
+            width:120px;
+            margin:10px;
+        }
+    }
+
+    .footer__rights__text {
+        font-size: 0.7rem;
+    }
+}

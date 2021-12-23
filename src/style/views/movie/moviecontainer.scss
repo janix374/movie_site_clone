@@ -124,6 +124,15 @@
         }
     }
 
+    .movie__backdrop {
+        text-align: center;       
+            .movie__backdrop__img {
+                padding: 8px;
+                background-color: rgb(20, 20, 20);
+                width: 80%;
+            }
+    }
+
 }
 
 @include breakpint(tablet) {
